@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.profile-header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.profile-header h1 {
+    margin: 0;
+    color: #333;
+}
+.profile-header p {
+    margin: 5px 0;
+    color: #666;
+}
+.jobs-section {
+    margin-top: 20px;
+}
+.job-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+.job-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+.job-card p {
+    margin: 5px 0;
+    color: #666;
+}
+.applicants {
+    margin-top: 10px;
+}
+.applicants h4 {
+    margin: 10px 0 5px;
+    color: #444;
+}
+.applicant {
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+}
+.applicant:first-child {
+    border-top: none;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #0056b3;
+}

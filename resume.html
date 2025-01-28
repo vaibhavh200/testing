@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Styling */
+.resume-container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.info .job-title {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the position as needed */
+    left: 0;
+    width: 100%; /* Span the entire width of the heading */
+    height: 3px; /* Thickness of the line */
+    background: #007BFF; /* Color of the line */
+    border-radius: 2px; /* Add slight rounding to the edges */
+}
+
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: #eef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Education and Experience Items */
+.education-item,
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.education-item p,
+.experience-item p {
+    margin-bottom: 5px;
+}
+
+.experience-item ul {
+    list-style: square inside;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="header">
+            <div class="photo">
+                <img src="profile.jpg" alt="Profile Photo">
+            </div>
+            <div class="info">
+                <h1>John Doe</h1>
+                <p class="job-title">Full-Stack Developer</p>
+                <p>Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a> | Phone: +1234567890</p>
+                <p>Location: New York, USA | LinkedIn: <a href="#">linkedin.com/in/johndoe</a></p>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2>Summary</h2>
+                <p>A highly motivated and results-oriented software developer with over 5 years of experience designing, developing, and deploying scalable web applications. Adept at collaborating with cross-functional teams to deliver projects on time while maintaining high-quality standards.</p>
+            </section>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>JavaScript (React, Node.js, Vue.js)</li>
+                    <li>Python (Django, Flask)</li>
+                    <li>HTML5, CSS3, SASS, Tailwind</li>
+                    <li>MySQL, MongoDB, PostgreSQL</li>
+                    <li>Version Control: Git, GitHub</li>
+                    <li>Cloud Services: AWS, Azure</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <p><strong>Bachelor of Science in Computer Science</strong></p>
+                    <p>XYZ University, 2018 - 2022</p>
+                    <p><em>Graduated with Honors, GPA: 3.9/4.0</em></p>
+                </div>
+                <div class="education-item">
+                    <p><strong>Advanced Web Development Certification</strong></p>
+                    <p>Online Course, 2023</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <p><strong>Software Engineer</strong> - ABC Corp</p>
+                    <p><em>2022 - Present</em></p>
+                    <ul>
+                        <li>Built and maintained microservices architecture for e-commerce applications.</li>
+                        <li>Improved API performance by 35% through code optimization and caching strategies.</li>
+                        <li>Led a team of 5 developers in implementing a CI/CD pipeline.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <p><strong>Frontend Developer Intern</strong> - XYZ Solutions</p>
+                    <p><em>2021 - 2022</em></p>
+                    <ul>
+                        <li>Redesigned the company's landing page, increasing user engagement by 20%.</li>
+                        <li>Implemented responsive web design techniques using CSS Grid and Flexbox.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Portfolio Website:</strong> A personal portfolio website showcasing projects and achievements, built with React and hosted on GitHub Pages.</li>
+                    <li><strong>E-commerce App:</strong> A full-stack e-commerce application using the MERN stack with a secure payment gateway.</li>
+                    <li><strong>Chat Application:</strong> A real-time chat app using WebSocket and Node.js for instant messaging.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Winner of Hackathon 2023 for developing an AI-powered job-matching platform.</li>
+                    <li>Certified AWS Solutions Architect (2023).</li>
+                    <li>Published a research paper on scalable backend architectures in IEEE.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

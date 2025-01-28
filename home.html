@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation bar styling */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff6b6b;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #ff4c4c;
+    }
+
+    /* Header styling */
+    header {
+      position: relative;
+      background-image: url('https://img.freepik.com/premium-photo/business-man-working-laptop-with-job-search-screen_218381-8578.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Overlay styling */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Text styling */
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* Button styling */
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      background-color: #ff6b6b;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4c4c;
+      box-shadow: 0 4px 15px rgba(255, 75, 75, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive font sizes */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.9em;
+      }
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ff6b6b;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ff4c4c;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar with Login button -->
+  <div class="navbar">
+    <a href="#login">Login</a>
+  </div>
+
+  <!-- Header section with overlay -->
+  <header>
+    <div class="overlay">
+      <h1>Find Your Dream Job</h1>
+      <p>Connect with top employers and discover exciting job opportunities tailored to your skills and interests.</p>
+      <div class="buttons">
+        <a href="#jobs" class="btn">Show Jobs</a>
+        <a href="#login" class="btn">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2024 Job Portal Inc. All rights reserved.</p>
+    <a href="#about">About Us</a> |
+    <a href="#contact">Contact</a> |
+    <a href="#privacy">Privacy Policy</a>
+  </footer>
+</body>
+</html>

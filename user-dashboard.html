@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        header {
+            background-image: url('../images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcb05;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 32px;
+            color: #444;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .profile-section button {
+            background-color: #ffcb05;
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .profile-section button:hover {
+            background-color: #ffab00;
+        }
+
+        .profile-photo {
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Recent Applications Section */
+        .applications-section {
+            background-color: #eef1f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .applications-section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .applications-section th, .applications-section td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .applications-section th {
+            background-color: #ffcb05;
+            color: #333;
+        }
+
+        .applications-section tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Job Recommendations Section */
+        .recommendations-section {
+            margin-bottom: 40px;
+        }
+
+        .job-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .job-card button:hover {
+            background-color: #218838;
+        }
+
+        /* Notifications Section */
+        .notifications-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .notifications-section ul li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Activity Section */
+        .activity-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity-section ul li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="user-dashboard">
+        <h2>Welcome, John Doe!</h2>
+
+        <!-- Profile Information Section -->
+        <div class="profile-section">
+            <div class="profile-info">
+                <h3>Your Profile</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Location:</strong> New York, USA</p>
+                <p><strong>Skills:</strong> JavaScript, React, Node.js</p>
+                <a href="edit.html"><button>Edit Profile</button></a>
+            </div>
+            <div class="profile-photo">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="User Photo">
+            </div>
+        </div>
+
+        <!-- Recent Applications Section -->
+        <div class="applications-section">
+            <h3>Your Applications</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+                        <th>Date Applied</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="job-details.html">Frontend Developer</a></td>
+                        <td>ABC Corp</td>
+                        <td>50000</td>
+                        <td>Pending</td>
+                        <td>October 10, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Backend Developer</td>
+                        <td>XYZ Ltd</td>
+                        <td>100000</td>
+                        <td>Accepted</td>
+                        <td>October 8, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Job Recommendations Section -->
+        <div class="recommendations-section">
+            <h3>Recommended Jobs for You</h3>
+            <div class="job-card">
+                <h4><a href="job-details.html">Full Stack Developer</a></h4>
+                <p><strong>Company:</strong> DEF Solutions</p>
+                <p><strong>Location:</strong> Remote</p>
+                <p>Looking for a Full Stack Developer with experience in Node.js and React.</p>
+                <button onclick="applyJob()">Apply</button>
+            </div>
+            <div class="job-card">
+                <h4><a href="job-details.html">UI/UX Designer</a></h4>
+                <p><strong>Company:</strong> GHI Tech</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p>Seeking a UI/UX Designer proficient in Figma and Adobe XD.</p>
+                <button onclick="applyJob()">Apply</button>
+            </div>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="notifications-section">
+            <h3>Notifications</h3>
+            <ul>
+                <li>Your application for Backend Developer at XYZ Ltd has been accepted.</li>
+                <li>New job posting available for Data Analyst at ABC Corp.</li>
+            </ul>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="activity-section">
+            <h3>Recent Activity</h3>
+            <ul>
+                <li>Applied for Frontend Developer at ABC Corp.</li>
+                <li>Updated profile information.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function applyJob() {
+            alert("Application submitted successfully!");
+        }
+    </script>
+</body>
+</html>

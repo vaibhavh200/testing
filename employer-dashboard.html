@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employer-dashboard.html">Dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="employer-dashboard">
+        <h2>Employer Dashboard</h2>
+
+        <h3>Post a Job</h3>
+        <form>
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" placeholder="Enter job title">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter job location">
+
+            <label for="technology">Technology:</label>
+            <select id="technology">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" rows="5" placeholder="Job description..."></textarea>
+
+            <button type="submit">Post Job</button>
+        </form>
+
+        <h3>Applications</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Applicant Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="job-details.html">Frontend Developer</a></td>
+                    <td>John Doe</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2024 Job Portal</p>
+    </footer>
+</body>
+</html>

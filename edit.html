@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="edit-profile-section">
+        <h2>Edit Your Profile</h2>
+
+        <form action="save-profile.html" method="POST" class="edit-profile-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" value="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" value="New York, USA" required>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" value="JavaScript, React, Node.js" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Save Changes</button>
+        </form>
+
+        <div class="back-to-dashboard">
+            <a href="user-dashboard.html">Back to Dashboard</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Job Portal</p>
+    </footer>
+</body>
+</html>
